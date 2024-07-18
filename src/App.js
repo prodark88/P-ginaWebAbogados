@@ -1,25 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import MainHeader from './components/headers/mainHeader';
+import { MainContent } from './components/content/mainContent';
+import { SecondHeader } from './components/headers/secondHeader';
+import { SecondContent } from './components/content/secondContent';
+import RowCards from './components/cards/rowCards';
+import ContactForm from './components/forms/contactForm';
+import Footer from './components/footers/mainFooter';
+import { router } from './routes/router';
+import { RouterProvider } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
+
+    
   );
 }
 
 export default App;
+
+
+{
+  /* <div className="App">
+
+      <MainHeader />
+      <MainContent />
+      <SecondHeader />
+      <RowCards/>
+      <SecondContent/>
+      <ContactForm/>
+      <Footer/>
+      
+      
+    </div> */
+}
